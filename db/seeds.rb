@@ -1,7 +1,6 @@
 # (mock data for my program)
 
-# ------------------ Users ------------------ 
-
+# ------------------ USERS ------------------ 
 # ------------------  Local businesses ------------------ 
 peace_coffee = User.create(name: "Peace Coffee", description: "A bean roastery and local coffee chain that supports the Institute for Agriculture and Trade Policy.", email: "peacecoffee@gmail.com", password: "coffeebean")
 
@@ -16,7 +15,7 @@ fin = User.create(name: "Friends In Need", description: "Provide food and resour
 
 salvation_army = User.create(name: "The Salvation Army Saint Paul", description: "Wherever there is a need in western Saint Paul, you'll find the Salvation Army.", email: "salvationarmy@gmail.com", password: "lovepeople")
 
-# ------------------ Projects ------------------ 
+# ------------------ PROJECTS ------------------ 
 Project.create(title: "Social Media", image_url: "https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", information: "REMOTE: Peace Coffee would love help for setting up a Facebook page to showcase online menu and pickup/delivery options.", user_id: peace_coffee.id)
 
 Project.create(title: "Online Order", image_url: "https://images.pexels.com/photos/891393/pexels-photo-891393.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", information: "REMOTE: Rabbit Hole would appreciate help for setting up online order and delivery on the website.", user_id: rabbit_hole.id)
@@ -28,3 +27,5 @@ Project.create(title: "Food Bank", image_url: "https://images.pexels.com/photos/
 Project.create(title: "Produce Giveaway", image_url: "https://images.pexels.com/photos/890507/pexels-photo-890507.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", information: "IN-PERSON: Friends In Need is looking for help to collect and giveaway produce.", user_id: fin.id)
 
 Project.create(title: "Inventory Management", image_url: "https://images.pexels.com/photos/6335/man-coffee-cup-pen.jpg?auto=compress&cs=tinysrgb&h=750&w=1260", information: "REMOTE: The Salvation Army Saint Paul is seeking a volunteer to help set up inventory management online.", user_id: salvation_army.id)
+
+Project.create(title: "Produce Distribution", image_url: "https://images.pexels.com/photos/890507/pexels-photo-890507.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", information: "In-PERSON: The Salvation Army Saint Paul is seeking 10 volunteers to help distributing produce.", user_id: salvation_army.id)
