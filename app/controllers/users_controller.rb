@@ -15,7 +15,7 @@ class UsersController < ApplicationController
             # creating a 'key/value pair' in the session hash using the user's id to log them in
             session[:user_id] = user.id
             # redirect logged_in user to user's profile
-            redirect "users/#{user.id}"
+            redirect "/users/#{user.id}"
         else
             # show an error message
             redirect '/login'
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     end
 
     get '/users/:id' do
-
+        "user show page"
     end
 
 end
