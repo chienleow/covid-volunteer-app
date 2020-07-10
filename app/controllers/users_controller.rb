@@ -3,6 +3,12 @@ class UsersController < ApplicationController
     get '/signup' do
         erb :'users/signup'
     end
+
+    post '/users' do
+        @user = User.create(params)
+        session[:user_id] = @user.id
+        redirect "users/#{@user.id}"
+    end
     
     # render the login form
     get '/login' do
@@ -37,3 +43,7 @@ class UsersController < ApplicationController
     end
 
 end
+
+
+
+## create a page where volunteers can view all projects
