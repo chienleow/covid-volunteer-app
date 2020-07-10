@@ -15,4 +15,16 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
+  helpers do
+    def current_user
+      # keeps track of the logged in user
+      User.find_by(id: session[:user_id])
+    end
+
+    def logged_in?
+      # returns a boolean if the user is logged in or not
+      !!current_user
+    end
+  end
+
 end
