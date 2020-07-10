@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+
+    get '/signup' do
+        erb :'users/signup'
+    end
     
     # render the login form
     get '/login' do
@@ -25,6 +29,11 @@ class UsersController < ApplicationController
     get '/users/:id' do
         @user = User.find_by(id: params[:id])
         erb :'users/show'
+    end
+
+    get '/logout' do
+        session.clear
+        redirect '/'
     end
 
 end
