@@ -2,18 +2,18 @@
 
 # ------------------ USERS ------------------ 
 # ------------------  Local businesses ------------------ 
-peace_coffee = User.create(name: "Peace Coffee", description: "A bean roastery and local coffee chain that supports the Institute for Agriculture and Trade Policy.", email: "peacecoffee@gmail.com", password: "coffeebean")
+peace_coffee = User.create(name: "Peace Coffee", description: "A bean roastery and local coffee chain that supports the Institute for Agriculture and Trade Policy.", email: "peacecoffee@gmail.com", password: "pw")
 
-rabbit_hole = User.create(name: "The Rabbit Hole", description: "A Korean Alice in Wonderland inspired restaurant.", email: "therabbithole@gmail.com", password: "koreanfood")
+rabbit_hole = User.create(name: "The Rabbit Hole", description: "A Korean Alice in Wonderland inspired restaurant.", email: "therabbithole@gmail.com", password: "pw")
 
-wild_rumpus = User.create(name: "Wild Rumpus", description: "A children's bookstore that lives the stories it sells.", email: "wildrumpus@gmail.com", password: "readmorebooks")
+wild_rumpus = User.create(name: "Wild Rumpus", description: "A children's bookstore that lives the stories it sells.", email: "wildrumpus@gmail.com", password: "pw")
 
 # ------------------ Local non-profits ------------------ 
-neighborhood_house = User.create(name: "Neighborhood House", description: "We are a multi-service agency, providing wrap-around services for people when they need it most.", email: "neighborhoodhouse@gmail.com", password: "goodneighbor")
+neighborhood_house = User.create(name: "Neighborhood House", description: "We are a multi-service agency, providing wrap-around services for people when they need it most.", email: "neighborhoodhouse@gmail.com", password: "pw")
 
-fin = User.create(name: "Friends In Need", description: "Provide food and resources to those in need.", email: "fin@gmail.com", password: "friends")
+fin = User.create(name: "Friends In Need", description: "Provide food and resources to those in need.", email: "fin@gmail.com", password: "pw")
 
-salvation_army = User.create(name: "The Salvation Army Saint Paul", description: "Wherever there is a need in western Saint Paul, you'll find the Salvation Army.", email: "salvationarmy@gmail.com", password: "lovepeople")
+salvation_army = User.create(name: "The Salvation Army Saint Paul", description: "Wherever there is a need in western Saint Paul, you'll find the Salvation Army.", email: "salvationarmy@gmail.com", password: "pw")
 
 # ------------------ PROJECTS ------------------ 
 Project.create(title: "Social Media", image_url: "https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", information: "REMOTE: Peace Coffee would love help for setting up a Facebook page to showcase online menu and pickup/delivery options.", user_id: peace_coffee.id)
