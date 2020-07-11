@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-    # CREATE
+    # ------------------ CREATE ------------------
 
     # user can create a new project
     get '/projects/new' do
@@ -24,11 +24,11 @@ class ProjectsController < ApplicationController
         end
     end
 
-    # READ
+    # ------------------ READ ------------------
 
     # show all projects
     get '/projects' do
-        redirect_if_not_logged_in
+        # redirect_if_not_logged_in # allow volunteers to see projects (even they are not logged_in yet)
         @projects = Project.all
         erb :'/projects/projects'
     end
@@ -40,7 +40,7 @@ class ProjectsController < ApplicationController
         erb :'/projects/show_project'
     end
 
-    # UPDATE
+    # ------------------ UPDATE ------------------
 
     get '/projects/:id/edit' do
         redirect_if_not_logged_in
@@ -64,7 +64,7 @@ class ProjectsController < ApplicationController
         end
     end
 
-    # DELETE
+    # ------------------ DELETE ------------------
 
     delete '/projects/:id/delete' do
         redirect_if_not_logged_in
