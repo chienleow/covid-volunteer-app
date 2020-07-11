@@ -1,0 +1,5 @@
+Things to do:
+- reference back to user.name in show_project.erb
+- create a page where volunteers can view all projects
+- add flash messages
+- add a confirmation message when deleting 

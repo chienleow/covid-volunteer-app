@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
                 @project = Project.new(title: params[:title], image_url: params[:image_url], information: params[:information])
                 @project.user_id = current_user.id
                 @project.save
-                redirect to '/projects'
+                redirect "/projects/#{@project.id}"
             end
         else
             redirect '/login'

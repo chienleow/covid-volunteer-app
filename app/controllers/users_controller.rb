@@ -43,7 +43,3 @@ class UsersController < ApplicationController
     end
 
 end
-
-
-
-## create a page where volunteers can view all projects
