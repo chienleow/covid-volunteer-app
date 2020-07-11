@@ -1,0 +1,13 @@
+<strong>Position: </strong><%= @project.title %><br>
+<img src="<%= @project.image_url %>" height="150"><br>
+<strong>Information: </strong><%= @project.information %><br><br>
+
+<form action="/projects/<%= @project.id %>/edit"><input type="submit" value=" Edit Project "></form><br>
+
+<form action="/projects/<%= @project.id %>/delete" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value=" Delete Project ">
+</form>
+
+
+<!-- how to reference back to the user.name? -->

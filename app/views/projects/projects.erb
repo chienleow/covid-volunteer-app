@@ -1,6 +1,9 @@
 <h2>All Projects</h2>
+
 <% @projects.each do |project| %>
-    <a href="/projects/<%= project.id %>"><%= project.title %></a><br>
-    <%= project.image_url %><br>
-    <%= project.information %>
+    <strong>Position: </strong><%= project.title %><br>
+    <img src="<%= project.image_url %>" height="150"><br>
+    <strong>Information: </strong><%= project.information %><br><br>
 <% end %>
+
+<!-- how to reference back to the user.name? -->
