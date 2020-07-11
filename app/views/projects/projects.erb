@@ -1,0 +1,6 @@
+<h2>All Projects</h2>
+<% @projects.each do |project| %>
+    <a href="/projects/<%= project.id %>"><%= project.title %></a><br>
+    <%= project.image_url %><br>
+    <%= project.information %>
+<% end %>
