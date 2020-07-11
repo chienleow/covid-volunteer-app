@@ -12,7 +12,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    if logged_in?
+      redirect "users/#{current_user.id}"
+    else
+      erb :welcome
+    end
   end
 
   helpers do
@@ -25,6 +29,20 @@ class ApplicationController < Sinatra::Base
       # returns a boolean if the user is logged in or not
       !!current_user
     end
-  end
 
+    def redirect_if_not_logged_in
+      if !logged_in?
+        puts "ERROR"
+        redirect '/login'
+      end
+    end
+
+    def authorized_user?(project)
+      project.user_id == current_user.id
+    end
+
+    def find_project
+      @project = Project.find(params[:id])
+    end
+  end
 end
