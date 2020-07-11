@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
     # user can create a new project
     get '/projects/new' do
         redirect_if_not_logged_in
-        erb :'projects/new'
+        erb :'/projects/new'
     end
 
     post '/projects' do
@@ -30,14 +30,14 @@ class ProjectsController < ApplicationController
     get '/projects' do
         redirect_if_not_logged_in
         @projects = Project.all
-        erb :'projects/projects'
+        erb :'/projects/projects'
     end
 
     # show single project
     get '/projects/:id' do
         redirect_if_not_logged_in
         find_project
-        erb :'projects/show_project'
+        erb :'/projects/show_project'
     end
 
     # UPDATE

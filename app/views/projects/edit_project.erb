@@ -1,11 +1,16 @@
 <h3>Edit a project</h3><br>
 
-<form action="/projects" method="post">
+<form action="/projects/<%= @project.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    
     <label for="name">Title:</label>
-    <input type="text" name="title" id="title" value=""><br><br>
+    <input type="text" name="title" id="title" value="<%= @project.title %>"><br><br>
+    
     <label for="image_url">Image URL:</label>
-    <input type="text" name="image_url" id="image_url" value=""><br><br>
+    <input type="text" name="image_url" id="image_url" value="<%= @project.image_url %>" size="100"><br><br>
+    
     <label for="information">Information:</label>
-    <input type="text" name="information" id="information" value=""><br><br>
-    <input type="submit" name="" value="  Create Project  ">
+    <input type="text" name="information" id="information" value="<%= @project.information %>" size="100"><br><br>
+    
+    <input type="submit" name="" value="  Edit Project  ">
 </form>

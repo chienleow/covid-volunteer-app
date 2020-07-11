@@ -1,18 +1,18 @@
 class UsersController < ApplicationController
 
     get '/signup' do
-        erb :'users/signup'
+        erb :'/users/signup'
     end
 
     post '/users' do
         @user = User.create(params)
         session[:user_id] = @user.id
-        redirect "users/#{@user.id}"
+        redirect "/users/#{@user.id}"
     end
     
     # render the login form
     get '/login' do
-        erb :'users/login'
+        erb :'/users/login'
     end
 
     # receive the data (params) from the login form
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
     get '/users/:id' do
         @user = User.find_by(id: params[:id])
-        erb :'users/show'
+        erb :'/users/show'
     end
 
     get '/logout' do
