@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
     get '/projects' do
         # redirect_if_not_logged_in # allow volunteers to see projects (even they are not logged_in yet)
         @projects = Project.all
-        erb :'/projects/projects'
+        erb :'/projects/all_projects'
     end
 
     # show single project
@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
 
     # ------------------ UPDATE ------------------
 
-    get '/projects/:id/edit' do
+    get '/projects/:id/edit' do #!!!! CHECK THIS, THIS BROKE!
         redirect_if_not_logged_in
         find_project
         if authorized_user?(@project)
