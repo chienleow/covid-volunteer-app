@@ -7,8 +7,9 @@ IMPORTANT!!
 Code:
 [ ] reference back to user.name in show_project.erb
 [x] create a page where volunteers can view all projects
-[ ] add flash messages
-[ ] add a confirmation message when deleting 
+[x] add flash messages
+[ ] make flash messages prettier
+[ ] add a confirmation message when deleting ?
 
 Stretch goals:
 [ ] add date and time to projects
