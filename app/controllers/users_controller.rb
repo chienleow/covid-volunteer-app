@@ -28,7 +28,7 @@ class UsersController < ApplicationController
             # redirect logged_in user to user's profile
             redirect "/users/#{@user.id}"
         else
-            flash[:errors] = "Wrong credentials, please try again."
+            flash[:errors] = "ERROR: Wrong credentials, please try again."
             redirect '/login'
         end
     end

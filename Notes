@@ -10,6 +10,7 @@ Code:
 [x] add flash messages
 [ ] make flash messages prettier
 [ ] add a confirmation message when deleting ?
+[ ] signup blank columns error?
 
 Stretch goals:
 [ ] add date and time to projects
