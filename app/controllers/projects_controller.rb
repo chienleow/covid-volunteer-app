@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
     post '/projects' do
         if logged_in?
             if params[:title].empty? || params[:image_url].empty? || params[:information].empty?
-                puts "ERROR: CANNOT BE EMPTY" # change to flash later
+                flash[:error] = "ERROR: Column(s) cannot be empty, please enter information."
                 redirect to '/projects/new'
             else
                 @project = Project.new(title: params[:title], image_url: params[:image_url], information: params[:information])
@@ -42,13 +42,13 @@ class ProjectsController < ApplicationController
 
     # ------------------ UPDATE ------------------
 
-    get '/projects/:id/edit' do #!!!! CHECK THIS, THIS BROKE!
+    get '/projects/:id/edit' do
         redirect_if_not_logged_in
         find_project
         if authorized_user?(@project)
             erb :'projects/edit_project'
         else
-            # puts "ERROR: NOT Authorized to edit this project, you are not the user" # change to flash later
+            flash[:error] = "ERROR: NOT authorized to edit this project, you are not the user."
             redirect "/projects/#{@project.id}"
         end
     end
@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
     patch '/projects/:id' do
         find_project
         if params[:title].empty? || params[:image_url].empty? || params[:information].empty?
-            puts "ERROR: Edit creation failure, please do not submit blank columns" # change to flash
+            flash[:error] = "ERROR: Edit creation failure, please do not submit blank columns."
             redirect "/projects/#{@project.id}/edit"
         else
             @project.update(title: params[:title], image_url: params[:image_url], information: params[:information])
@@ -73,7 +73,7 @@ class ProjectsController < ApplicationController
             @project.destroy
             redirect '/projects'
         else
-            # puts "ERROR: Not authorized to edit others' projects!"
+            flash[:error] = "ERROR: NOT authorized to delete this project, you are not the user."
             redirect "/projects/#{@project.id}"
         end
     end

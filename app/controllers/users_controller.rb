@@ -24,10 +24,11 @@ class UsersController < ApplicationController
             # 'if user' make sure user can be found first then authenticate them
             # creating a 'key/value pair' in the session hash using the user's id to log them in
             session[:user_id] = @user.id
+            flash[:message] = "Welcome back to the volunteer app, #{@user.name}."
             # redirect logged_in user to user's profile
             redirect "/users/#{@user.id}"
         else
-            # show an error message
+            flash[:error] = "Wrong credentials, please try again."
             redirect '/login'
         end
     end
