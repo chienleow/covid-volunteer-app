@@ -5,11 +5,11 @@ IMPORTANT!!
 - Create README short description
 
 Code:
-- reference back to user.name in show_project.erb
-- (DONE) create a page where volunteers can view all projects
-- add flash messages
-- add a confirmation message when deleting 
+[ ] reference back to user.name in show_project.erb
+[x] create a page where volunteers can view all projects
+[ ] add flash messages
+[ ] add a confirmation message when deleting 
 
 Stretch goals:
-- add date and time to projects
-- organize projetcs by date and time
+[ ] add date and time to projects
+[ ] organize projetcs by date and time

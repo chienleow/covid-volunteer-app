@@ -48,7 +48,7 @@ class ProjectsController < ApplicationController
         if authorized_user?(@project)
             erb :'projects/edit_project'
         else
-            puts "ERROR: NOT Authorized to edit this project, you are not the user" # change to flash later
+            # puts "ERROR: NOT Authorized to edit this project, you are not the user" # change to flash later
             redirect "/projects/#{@project.id}"
         end
     end
@@ -73,7 +73,7 @@ class ProjectsController < ApplicationController
             @project.destroy
             redirect '/projects'
         else
-            puts "ERROR: Not authorized to edit others' projects!"
+            # puts "ERROR: Not authorized to edit others' projects!"
             redirect "/projects/#{@project.id}"
         end
     end
