@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
 
     post '/projects' do
         if logged_in?
-            if params[:title].empty? || params[:image_url].empty? || params[:information].empty?
+            if params[:title].empty? || params[:image_url].empty? || params[:information].empty? # check if i could use validate?
                 flash[:errors] = "ERROR: Column(s) cannot be empty, please enter information."
                 redirect to '/projects/new'
             else
