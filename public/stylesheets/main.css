@@ -82,7 +82,9 @@
     color: white;
     padding: 10px 24px; 
     cursor: pointer; 
-    float: left; 
+    float: left;
+    margin-top:-25px;
+    margin-bottom:10px; 
   }
   
   .btn-group:after {

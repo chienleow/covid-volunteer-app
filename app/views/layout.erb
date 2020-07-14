@@ -25,7 +25,13 @@
         <h4 style="color:red;"><%= flash[:errors] %></h4>
       <% end %><br>
 
-        <%= yield %>
+      <div class="btn-group">
+        <button onclick="document.location='/projects'">View All Volunteer Projects</button>
+        <button onclick="document.location='/login'">Login</button>
+        <button onclick="document.location='/signup'">Sign Up</button>
+      </div>
+
+      <%= yield %>
 
       <footer class="branding">
         <small>&copy; 2020 <strong>Covid19VolunteerApp</strong></small>
