@@ -40,6 +40,7 @@ class UsersController < ApplicationController
 
     get '/logout' do
         session.clear
+        flash[:message] = "Thank you for using the volunteer app, please come back again."
         redirect '/'
     end
 
