@@ -10,10 +10,10 @@ Code:
 [x] add flash messages
 [x] make flash messages prettier
 [o] add a confirmation message when deleting? (not needed for now)
-[ ] signup blank columns error?
 [x] signup, login, view all in 'layout' view to show on all pages?
 [o] hide 'edit', 'delete' from other users (not needed for now)
 [ ] validate users
+[ ] signup blank columns error? (CHECK THIS AGAIN!!!)
 
 Stretch goals:
 [ ] add date and time to projects
