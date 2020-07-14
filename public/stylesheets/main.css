@@ -76,6 +76,29 @@
     clear: both;
   }
 
+  .btn-group button {
+    background-color: #6F01C4; 
+    border: 1px solid white; 
+    color: white;
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+  }
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; 
+  }
+  
+  .btn-group button:hover {
+    background-color: #654DFB;
+  }
+
   footer.branding {
     border-top: 2px solid #ccc;
     margin-top: 20px;
