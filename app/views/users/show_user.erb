@@ -2,6 +2,13 @@
 <p><strong>Email: </strong><%= @user.email %></p>
 <p><strong>Description: </strong><%= @user.description %></p>
 
-<form action="/projects"><input type="submit" value=" View All Project "></form><br>
-<form action="/projects/new"><input type="submit" value=" Create Project "></form><br>
-<form action="/logout"><input type="submit" value=" Log Out "></form>
+<% @user.projects.each do |project| %>
+    <strong>Position: </strong><%= project.title %><br>
+    <img src="<%= project.image_url %>" height="150"><br>
+    <strong>Information: </strong><%= project.information %><br><br>
+<% end %>
+
+<div class="btn-group">
+    <button onclick="document.location='/projects/new'">Create Project</button>
+    <button onclick="document.location='/logout'">Log Out</button>
+</div>

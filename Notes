@@ -5,14 +5,14 @@ IMPORTANT!!
 - Create README short description
 
 Code:
-[ ] reference back to user.name in show_project.erb
+[o] reference back to user.name in show_project.erb (not needed for now)
 [x] create a page where volunteers can view all projects
 [x] add flash messages
 [x] make flash messages prettier
-[ ] add a confirmation message when deleting ?
+[o] add a confirmation message when deleting? (not needed for now)
 [ ] signup blank columns error?
-[ ] signup, login, view all in 'layout' view to show on all pages?
-[ ] hide 'edit', 'delete' from other users
+[x] signup, login, view all in 'layout' view to show on all pages?
+[o] hide 'edit', 'delete' from other users (not needed for now)
 [ ] validate users
 
 Stretch goals:
