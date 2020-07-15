@@ -3,6 +3,7 @@
 <strong>Information: </strong><%= @project.information %><br><br>
 
 <div class="btn-group">
+    <button onclick="document.location='/'">Go to Profile</button>
     <button onclick="document.location='/projects/<%= @project.id %>/edit'">Edit Project</button>
     <form action="/projects/<%= @project.id %>/delete" method="post">
         <input id="hidden" type="hidden" name="_method" value="delete">
