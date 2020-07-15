@@ -22,3 +22,11 @@ Stretch goals:
 [ ] volunteer will be a model
 [ ] volunteer or organization can comment each other
 
+
+
+<!--form action="/projects/<%= @project.id %>/edit"><input type="submit" value=" Edit Project "></form><br>
+
+<!--form action="/projects/<%= @project.id %>/delete" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value=" Delete Project ">
+</form>

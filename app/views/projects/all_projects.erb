@@ -8,6 +8,7 @@
 <h2>All Projects</h2>
 
 <% @projects.each do |project| %>
+    <strong><%= project.user.name %><br>
     <strong>Position: </strong><%= project.title %><br>
     <img src="<%= project.image_url %>" height="150"><br>
     <strong>Information: </strong><%= project.information %><br><br>
