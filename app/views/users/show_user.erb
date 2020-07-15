@@ -8,7 +8,9 @@
     <strong>Information: </strong><%= project.information %><br><br>
 <% end %>
 
-<div class="btn-group">
-    <button onclick="document.location='/projects/new'">Create Project</button>
-    <button onclick="document.location='/logout'">Log Out</button>
-</div>
+<% if logged_in? %>
+    <div class="btn-group">
+        <button onclick="document.location='/projects/new'">Create Project</button>
+        <button onclick="document.location='/logout'">Log Out</button>
+    </div>
+<% end %>

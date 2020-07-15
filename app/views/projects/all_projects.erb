@@ -1,9 +1,11 @@
 <p>Log In or Sign Up as local business or local non-profit to create, edit or delete a project.</p><br>
 
-<div class="btn-group">
-    <button onclick="document.location='/'">Go to Profile</button>
-    <button onclick="document.location='/logout'">Log Out</button>
-</div>
+<% if logged_in? %>
+    <div class="btn-group">
+        <button onclick="document.location='/'">Go to Profile</button>
+        <button onclick="document.location='/logout'">Log Out</button>
+    </div>
+<% end %>
 
 <h2>All Projects</h2>
 

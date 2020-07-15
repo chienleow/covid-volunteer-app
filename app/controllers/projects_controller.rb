@@ -28,14 +28,13 @@ class ProjectsController < ApplicationController
 
     # show all projects
     get '/projects' do
-        # redirect_if_not_logged_in # allow volunteers to see projects (even they are not logged_in yet)
+        # allow volunteers to see projects (even they are not logged_in yet)
         @projects = Project.all
         erb :'/projects/all_projects'
     end
 
     # show single project
     get '/projects/:id' do
-        redirect_if_not_logged_in
         find_project
         erb :'/projects/show_project'
     end

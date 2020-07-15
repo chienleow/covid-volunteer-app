@@ -14,7 +14,8 @@ Code:
 [o] hide 'edit', 'delete' from other users (not needed for now)
 [ ] validate users
 [ ] signup blank columns error? (CHECK THIS AGAIN!!!)
-[ ] in "/projects/:id", change edit project and delete project button
+[x] in "/projects/:id", change edit project and delete project button
+[ ] in "/projects/new", change the button
 
 Stretch goals:
 [ ] add date and time to projects
