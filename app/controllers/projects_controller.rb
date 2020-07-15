@@ -60,6 +60,7 @@ class ProjectsController < ApplicationController
             redirect "/projects/#{@project.id}/edit"
         else
             @project.update(title: params[:title], image_url: params[:image_url], information: params[:information])
+            flash[:message] = "You have successfully updated your project."
             redirect "/projects/#{@project.id}"
         end
     end
