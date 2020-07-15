@@ -3,7 +3,7 @@
 <p><strong>Description: </strong><%= @user.description %></p>
 
 <% @user.projects.each do |project| %>
-    <strong>Position: </strong><%= project.title %><br>
+    <h4><a href="/projects/<%= project.id %>"><strong>Position: </strong><%= project.title %></a></h4><br>
     <img src="<%= project.image_url %>" height="150"><br>
     <strong>Information: </strong><%= project.information %><br><br>
 <% end %>

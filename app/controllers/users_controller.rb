@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     post '/users' do
         @user = User.create(params)
         session[:user_id] = @user.id
+        flash[:message] = "Welcome to the volunteer app, #{@user.name}, you can create your project(s) here."
         redirect "/users/#{@user.id}"
     end
     
