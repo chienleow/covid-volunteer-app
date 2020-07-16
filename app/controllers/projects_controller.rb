@@ -73,7 +73,7 @@ class ProjectsController < ApplicationController
         if authorized_user?(@project)
             @project.destroy
             flash[:message] = "You have successfully deleted your project."
-            redirect '/projects'
+            redirect '/' # direct them back to their profile
         else
             flash[:errors] = "ERROR: NOT authorized to delete this project."
             redirect "/projects/#{@project.id}"
