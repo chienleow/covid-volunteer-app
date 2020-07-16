@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
                 @project = Project.new(title: params[:title], image_url: params[:image_url], information: params[:information])
                 @project.user_id = current_user.id
                 @project.save
+                flash[:message] = "You have successfully created your project."
                 redirect "/projects/#{@project.id}"
             end
         else
@@ -47,7 +48,7 @@ class ProjectsController < ApplicationController
         if authorized_user?(@project)
             erb :'projects/edit_project'
         else
-            flash[:errors] = "ERROR: NOT authorized to edit this project, you are not the user."
+            flash[:errors] = "ERROR: NOT authorized to edit this project."
             redirect "/projects/#{@project.id}"
         end
     end
@@ -55,7 +56,7 @@ class ProjectsController < ApplicationController
     patch '/projects/:id' do
         find_project
         if params[:title].empty? || params[:image_url].empty? || params[:information].empty?
-            flash[:errors] = "ERROR: Edit creation failure, please do not submit blank columns."
+            flash[:errors] = "ERROR: Edit creation failure, please do not submit blank column(s)."
             redirect "/projects/#{@project.id}/edit"
         else
             @project.update(title: params[:title], image_url: params[:image_url], information: params[:information])
@@ -71,9 +72,10 @@ class ProjectsController < ApplicationController
         find_project
         if authorized_user?(@project)
             @project.destroy
+            flash[:message] = "You have successfully deleted your project."
             redirect '/projects'
         else
-            flash[:errors] = "ERROR: NOT authorized to delete this project, you are not the user."
+            flash[:errors] = "ERROR: NOT authorized to delete this project."
             redirect "/projects/#{@project.id}"
         end
     end
