@@ -5,10 +5,15 @@ class UsersController < ApplicationController
     end
 
     post '/users' do
-        @user = User.create(params)
-        session[:user_id] = @user.id
-        flash[:message] = "Welcome to the volunteer app, #{@user.name}, you can create your project(s) here."
-        redirect "/users/#{@user.id}"
+        @user = User.new(params)
+        if @user.save
+            session[:user_id] = @user.id
+            flash[:message] = "Welcome to the volunteer app, #{@user.name}, you can create your project(s) here."
+            redirect "/users/#{@user.id}"
+        else
+            flash[:errors] = "Account signup failed, please try again, make sure all columns are filled."
+            redirect '/signup'
+        end
     end
     
     # render the login form
