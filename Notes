@@ -1,33 +1,23 @@
 Things to do:
 IMPORTANT!!
 - COMMIT ALWAYS
-- Record a 30 mins coding session
 - Create README short description
 
 Code:
-[o] reference back to user.name in show_project.erb (not needed for now)
+[x] reference back to user.name in show_project.erb
 [x] create a page where volunteers can view all projects
 [x] add flash messages
 [x] make flash messages prettier
-[o] add a confirmation message when deleting? (not needed for now)
 [x] signup, login, view all in 'layout' view to show on all pages?
-[o] hide 'edit', 'delete' from other users (not needed for now)
-[ ] validate users
-[ ] signup blank columns error? (CHECK THIS AGAIN!!!)
+[x] hide 'edit', 'delete' from other users
+[x] validate users
+[x] signup blank columns error? (CHECK THIS AGAIN!!!)
 [x] in "/projects/:id", change edit project and delete project button
-[ ] in "/projects/new", change the button
+[x] in "/projects/new", change the button
 
 Stretch goals:
+[ ] add a confirmation message when deleting?
 [ ] add date and time to projects
 [ ] organize projetcs by date and time
-[ ] volunteer will be a model
-[ ] volunteer or organization can comment each other
-
-
-
-<!--form action="/projects/<%= @project.id %>/edit"><input type="submit" value=" Edit Project "></form><br>
-
-<!--form action="/projects/<%= @project.id %>/delete" method="post">
-    <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" value=" Delete Project ">
-</form>
+[ ] volunteer will be a model, can create profile, put resume etc
+[ ] volunteer or organization can comment on each other's profile
