@@ -1,6 +1,6 @@
 <strong>Position: </strong><%= @project.title %><br>
 <img src="<%= @project.image_url %>" height="150"><br>
-<strong>Information: </strong><%= @project.information %><br><br>
+<%= @project.information %><br><br>
 
 <% if logged_in? %>
     <div class="btn-group">
