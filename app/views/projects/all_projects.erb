@@ -13,7 +13,7 @@
 
 <% @projects.each do |project| %>
     <a href="/users/<%= project.user.id %>"><strong><%= project.user.name %></a><br>
-    <a href="/projects/<%= project.id %>"><strong>Position: </strong><%= project.title %></a><br>
+    <strong>Position: </strong><%= project.title %><br>
     <img src="<%= project.image_url %>" height="150"><br>
     <strong>Information: </strong><%= project.information %><br><br>
 <% end %>

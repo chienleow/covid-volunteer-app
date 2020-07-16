@@ -8,7 +8,7 @@
     <%= project.information %><br><br>
 <% end %>
 
-<% if logged_in? %>
+<% if logged_in? && (@user.id == current_user.id) %>
     <div class="btn-group">
         <button onclick="document.location='/projects/new'">Create Project</button>
         <button onclick="document.location='/logout'">Log Out</button>

@@ -1,14 +1,17 @@
+<h2><%= @project.user.name %></h2>
 <strong>Position: </strong><%= @project.title %><br>
 <img src="<%= @project.image_url %>" height="150"><br>
 <%= @project.information %><br><br>
 
 <% if logged_in? %>
     <div class="btn-group">
+        <% if authorized_user?(@project) %>
         <button onclick="document.location='/'">Go to Profile</button>
         <button onclick="document.location='/projects/<%= @project.id %>/edit'">Edit Project</button>
         <form action="/projects/<%= @project.id %>/delete" method="post">
             <input id="hidden" type="hidden" name="_method" value="delete">
             <button>Delete Project</button>
+            <% end %>
         </form>
     </div>
 <% end %>
