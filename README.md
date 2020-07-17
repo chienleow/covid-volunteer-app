@@ -9,17 +9,13 @@ The Covid Volunteer App: Stronger Together allows local businesses or non-profit
 2. `cd` into the `covid-volunteer-app` directory
 
 2. Execute this in your console to install all required gems:
-
 ```
 $ bundle install
 ```
-
 3. Run this command from your command line
-
 ```
 $ shotgun
 ```
-
 4. visit localhost:[port-number] (the port number will be specified after running shotgun).
 
 ## Usage
