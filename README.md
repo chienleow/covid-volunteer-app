@@ -1,1 +1,1 @@
-
+The Covid Volunteer App: Stronger Together allows local businesses or non-profit organizations to post projects they need volunteers for. Volunteers can view and choose from a list of projects they want to be involved in, all in one place.
