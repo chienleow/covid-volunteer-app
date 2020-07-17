@@ -21,9 +21,9 @@ $ shotgun
 ## Usage
 
 1. Welcome to Stronger Together Volunteer App, please log in or sign up a new profile as business or non-profit.
-2. When a user is signed up and signed in, user can create projects they need volunteers for.
+2. When a user is signed up and signed in, user can create project(s) they need volunteers for.
 3. User can create new projects, read the existing projects of theirs or others, update or delete the project(s) they created.
-4. A volunteer do not need to sign up for an account to view all volunteer projects.
+4. A volunteer do not need to sign up for an account to view all the volunteer projects.
 
 
 ## Contributing
