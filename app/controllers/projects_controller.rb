@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-
+    # ------------------ CRUD ------------------
+    
     # ------------------ CREATE ------------------
 
     # user can create a new project
@@ -67,7 +68,7 @@ class ProjectsController < ApplicationController
 
     # ------------------ DELETE ------------------
 
-    delete '/projects/:id/delete' do # get '/projects/6/delete' broke # Check this!!!
+    delete '/projects/:id/delete' do
         redirect_if_not_logged_in
         find_project
         if authorized_user?(@project)
