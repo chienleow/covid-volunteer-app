@@ -1,7 +1,6 @@
 Things to do:
 IMPORTANT!!
 - COMMIT ALWAYS
-- Create README short description
 
 Code:
 [x] reference back to user.name in show_project.erb
