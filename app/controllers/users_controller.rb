@@ -11,7 +11,7 @@ class UsersController < ApplicationController
             flash[:message] = "Welcome to the volunteer app, #{@user.name}, you can create your project(s) here."
             redirect "/users/#{@user.id}"
         else
-            flash[:errors] = "Account signup failed, please try again, make sure all columns are filled."
+            flash[:errors] = "Account signup failed, please try again, make sure you use an email address that has never been signed up here before and all columns are filled."
             redirect '/signup'
         end
     end
