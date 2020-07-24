@@ -21,3 +21,13 @@ Stretch goals:
 [ ] organize projetcs by date and time
 [ ] volunteer will be a model, can create profile, put resume etc
 [ ] volunteer or organization can comment on each other's profile
+
+
+
+<% if authorized_user?(@project) %>
+        <button onclick="document.location='/'">Go to Profile</button>
+        <button onclick="document.location='/projects/<%= @project.id %>/edit'">Edit Project</button>
+        <form action="/projects/<%= @project.id %>/delete" method="post">
+            <input id="hidden" type="hidden" name="_method" value="delete">
+            <button>Delete Project</button>
+            <% end %>

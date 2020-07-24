@@ -67,7 +67,7 @@ class ProjectsController < ApplicationController
 
     # ------------------ DELETE ------------------
 
-    delete '/projects/:id/delete' do
+    delete '/projects/:id/delete' do # get '/projects/6/delete' broke # Check this!!!
         redirect_if_not_logged_in
         find_project
         if authorized_user?(@project)
