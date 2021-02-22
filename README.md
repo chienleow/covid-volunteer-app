@@ -1,6 +1,10 @@
-# Stronger Together Covid Volunteer App
+# Covid Volunteer App: "Stronger Together"
 
-The Covid Volunteer App: Stronger Together allows local businesses or non-profit organizations to post projects they need volunteers for. Volunteers can view and choose from a list of projects they want to be involved in, all in one place.
+Covid Volunteer App: "Stronger Together" allows local businesses or non-profit organizations to post projects they need volunteers for. Volunteers can view and choose from a list of projects they want to be involved in, all in one place.
+
+## Built With
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Sinatra](http://sinatrarb.com/)
 
 ## Installation
 
