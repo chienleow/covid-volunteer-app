@@ -6,6 +6,10 @@ Covid Volunteer App: "Stronger Together" allows local businesses or non-profit o
 - [Ruby](https://www.ruby-lang.org/en/)
 - [Sinatra](http://sinatrarb.com/)
 
+## Demo
+- [Video Walkthrough](https://youtu.be/gLPlippJhyA)
+- [Blog Post](https://chienleow.github.io/stronger_together_covid_volunteer_app)
+
 ## Installation
 
 1. Fork and clone this repository down to your local environment
